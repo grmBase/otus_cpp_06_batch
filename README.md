@@ -1,1 +1,1 @@
-# otus_cpp_06_batch
+# otus_cpp_06_bulk
