@@ -83,7 +83,9 @@ int tst::t_work_obj::handle(size_t an_batch_size)
 
 
   return 0;
-};
+}
+//------------------------------
+
 
 
 void tst::t_work_obj::print_batch(const std::vector<std::string>& avec_buf)
@@ -92,11 +94,14 @@ void tst::t_work_obj::print_batch(const std::vector<std::string>& avec_buf)
   {
     std::cout << curr << std::endl;
   }
-};
+}
+//------------------------------
+
 
 void tst::t_work_obj::logout(const std::string_view& astr_view)
 {
 #ifdef DBG_LOGGING
   std::cout << astr_view << std::endl;
 #endif
-};
+}
+//------------------------------
