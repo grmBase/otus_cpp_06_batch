@@ -17,7 +17,7 @@ namespace tst
   {
   public:
 
-    static int handle(size_t an_batch_size);
+    static int handle(size_t aun_batch_size);
   private:
     static void print_batch(const std::vector<std::string>& avec_buf);
 

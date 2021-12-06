@@ -11,12 +11,12 @@
 
 
 
-int tst::t_work_obj::handle(size_t an_batch_size)
+int tst::t_work_obj::handle(size_t aun_batch_size)
 {
 
 
   std::vector<std::string> vec_buffer;
-  vec_buffer.reserve(an_batch_size);
+  vec_buffer.reserve(aun_batch_size);
 
   std::string str_curr;
   int n_dyn_block_depth = 0;
@@ -64,7 +64,7 @@ int tst::t_work_obj::handle(size_t an_batch_size)
     vec_buffer.push_back(std::move(str_curr));
 
     if (n_dyn_block_depth == 0) {
-      if (vec_buffer.size() >= an_batch_size) {
+      if (vec_buffer.size() >= aun_batch_size) {
 
         logout("<< regular batch ready ----------");
         print_batch(vec_buffer);

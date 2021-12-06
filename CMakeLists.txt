@@ -5,7 +5,7 @@ set(PROJECT_VESRION 0.0.${PATCH_VERSION})
 
 
 # имя проекта
-project(home_work6_project_name VERSION ${PROJECT_VESRION})
+project(bulk VERSION ${PROJECT_VESRION})
 
 
 # поищем, потом может будем использовать
@@ -47,13 +47,13 @@ project(home_work6_project_name VERSION ${PROJECT_VESRION})
 
 
 # имя основной утилиты будет таким же как и имя проекта?
-add_executable(home_work6
+add_executable(bulk
 src/main.cpp 
 src/work_obj.cpp
 )
 
 
-target_include_directories(home_work6 PUBLIC
+target_include_directories(bulk PUBLIC
 ${PROJECT_SOURCE_DIR}/./
 #${PROJECT_SOURCE_DIR}/../interfaces
 )
@@ -64,11 +64,11 @@ ${PROJECT_SOURCE_DIR}/./
 #add_library(helloworld lib.cpp)
 #add_executable(test_version test_version.cpp)
 
-set_target_properties(home_work6 PROPERTIES
+set_target_properties(bulk PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
 )
-target_include_directories(home_work6
+target_include_directories(bulk
     PRIVATE "${CMAKE_BINARY_DIR}"
 )
 
@@ -90,18 +90,18 @@ target_include_directories(home_work6
 
 
 if (MSVC)
-    target_compile_options(home_work6 PRIVATE
+    target_compile_options(bulk PRIVATE
         /W4
     )
 else ()
-    target_compile_options(home_work6 PRIVATE
+    target_compile_options(bulk PRIVATE
         -Wall -Wextra -pedantic -Werror
     )
 endif()
 
 
 
-install(TARGETS home_work6 RUNTIME DESTINATION bin)
+install(TARGETS bulk RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 
